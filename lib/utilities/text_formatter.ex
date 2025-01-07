@@ -1,4 +1,4 @@
-defmodule TextFormatter do
+defmodule Utilities.TextFormatter do
   @moduledoc """
   Utility module to format text for better readability in the terminal.
   """

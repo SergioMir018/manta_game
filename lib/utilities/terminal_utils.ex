@@ -1,4 +1,4 @@
-defmodule TerminalUtils do
+defmodule Utilities.TerminalUtils do
   @moduledoc """
   Utility functions for terminal operations.
   """
