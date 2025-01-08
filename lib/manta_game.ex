@@ -2,6 +2,7 @@ defmodule MantaGame do
   @moduledoc """
   Main module for MantaGame.
   """
+  require Logger
   alias Utilities
   alias Story
   alias Servers
@@ -12,7 +13,9 @@ defmodule MantaGame do
 
   def start do
     case Servers.GameServer.start_link() do
-      {:ok, _pid} ->
+      {:ok, pid} ->
+        Logger.info("GenServer: #{inspect(pid)} online")
+
         Utilities.TerminalUtils.clear_screen()
 
         IO.puts("Bienvenido a Manta!")
@@ -23,7 +26,7 @@ defmodule MantaGame do
         Story.GameIntroduction.introduction()
 
       {:error, reason} ->
-        IO.puts("Error al iniciar el servidor: #{inspect(reason)}")
+        Logger.error("Error while initiating GameServer beacuse: #{reason}")
     end
   end
 end
