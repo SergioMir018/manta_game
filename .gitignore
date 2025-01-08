@@ -21,3 +21,6 @@ manta_game-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Log files
+/log/
