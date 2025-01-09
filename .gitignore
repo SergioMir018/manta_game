@@ -24,3 +24,6 @@ manta_game-*.tar
 
 # Log files
 /log/
+
+# Game file
+/manta_game
